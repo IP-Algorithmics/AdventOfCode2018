@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="84ffc9fd-f924-458a-8848-c73de66fd17e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../../Day 2/1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Day 2/1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../1/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../2/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -82,7 +81,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="182" />
     <option name="y" value="-12" />
     <option name="width" value="1695" />
@@ -114,7 +113,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543843078107" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543843828257" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -154,15 +153,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1543840597884</updated>
-      <workItem from="1543840600918" duration="2814000" />
+      <workItem from="1543840600918" duration="3019000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2814000" />
+    <option name="totallyTimeSpent" value="3019000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Image Layers" />
