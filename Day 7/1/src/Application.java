@@ -4,19 +4,14 @@ import java.util.*;
 
 public class Application {
     private static String order = "";
+    private static HashMap<Character,ArrayList<Character>> tasks = new HashMap<>();
+    private static ArrayList<Character> solved = new ArrayList<>();
+    private static ArrayList<Character> charsUsed = new ArrayList<>();
+    private static File file = new File("input.txt");
+    private static Scanner sc = null;
 
-    public static void main(String args[]){
+    private static void initializeVariables(){
 
-
-        HashMap<Character,ArrayList<Character>> req = new HashMap<>();
-        ArrayList<Character> solved = new ArrayList<>();
-        ArrayList<Character> charsUsed = new ArrayList<>();
-
-
-
-
-        File file = new File("input.txt");
-        Scanner sc = null;
         try {
             sc = new Scanner(file);
         } catch (FileNotFoundException e) {
@@ -33,12 +28,14 @@ public class Application {
             }
         }
 
-
         ArrayList<Character> initArr = new ArrayList<>();
         for(Character i : charsUsed){
-            req.put(i,initArr);
+            tasks.put(i,initArr);
         }
-        //System.out.println(req);
+        //System.out.println(tasks);
+
+    }
+    private static void populateTaskList(){
 
         try {
             sc = new Scanner(file);
@@ -50,33 +47,45 @@ public class Application {
             String input = sc.nextLine();
 
             ArrayList<Character> tempCharArr = new ArrayList<>();
-            if(!req.get(input.charAt(36)).isEmpty()){
-                tempCharArr.addAll(req.get(input.charAt(36)));
+            if(!tasks.get(input.charAt(36)).isEmpty()){
+                tempCharArr.addAll(tasks.get(input.charAt(36)));
             }
             if(!tempCharArr.contains(input.charAt(5))){
                 tempCharArr.add(input.charAt(5));
             }
 
-            req.put(input.charAt(36), tempCharArr);
+            tasks.put(input.charAt(36), tempCharArr);
             //System.out.println(tempCharArr);
         }
 
 
-        System.out.println(req);
+        System.out.println(tasks);
         System.out.println(solved);
-        while(!req.isEmpty()){
-            for (Character key: req.keySet()) {
-                ArrayList<Character> tempCharArr = req.get(key);
+    }
+
+    private static void getOrder(){
+        while(!tasks.isEmpty()){
+            for (Character key: tasks.keySet()) {
+                ArrayList<Character> tempCharArr = tasks.get(key);
                 if(solved.containsAll(tempCharArr)){
                     order = order + key;
                     solved.add(key);
-                    req.remove(key);
+                    tasks.remove(key);
 //                    System.out.println(order);
-//                    System.out.println(req);
+//                    System.out.println(tasks);
                     break;
                 }
             }
         }
+
         System.out.println(order);
+    }
+
+
+
+    public static void main(String args[]){
+        initializeVariables();
+        populateTaskList();
+        getOrder();
     }
 }
